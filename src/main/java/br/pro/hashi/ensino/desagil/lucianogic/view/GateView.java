@@ -71,11 +71,14 @@ public class GateView extends FixedPanel implements ItemListener {
 		}
 		
 		if(outSize == 1) {
-			add(outBoxes[0], 184, 60, 20, 20);			
+			add(outBoxes[0], 184, 60, 20, 20);	
+			outBoxes[0].setSelected(gate.read(0));
 		}
 		else {
 			add(outBoxes[0], 184, 60, 20, 20);
 			add(outBoxes[1], 184, 100, 20, 20);
+			outBoxes[0].setSelected(gate.read(0));
+			outBoxes[1].setSelected(gate.read(1));
 			}			
 	}
 
